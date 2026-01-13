@@ -1,0 +1,23 @@
+09:35:42 **** Build of configuration Debug for project tutorial-1-sdk ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.cc'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../tutorial-1-sdk_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
+'Finished building: ../src/main.cc'
+' '
+'Building target: tutorial-1-sdk.elf'
+'Invoking: ARM v7 g++ linker'
+arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../tutorial-1-sdk_bsp/ps7_cortexa9_0/lib -o "tutorial-1-sdk.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: tutorial-1-sdk.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size tutorial-1-sdk.elf  |tee "tutorial-1-sdk.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19024	   1144	  22576	  42744	   a6f8	tutorial-1-sdk.elf
+'Finished building: tutorial-1-sdk.elf.size'
+' '
+
+09:35:43 Build Finished (took 1s.509ms)
+

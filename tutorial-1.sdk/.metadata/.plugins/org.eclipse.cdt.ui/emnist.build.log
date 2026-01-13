@@ -1,0 +1,6 @@
+23:24:01 **** Incremental Build of configuration Default for project emnist ****
+make all 
+make: *** No rule to make target 'all'.  Stop.
+
+23:24:01 Build Finished (took 139ms)
+

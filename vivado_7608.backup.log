@@ -1,0 +1,28 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Mon Nov 24 08:27:12 2025
+# Process ID: 7608
+# Current directory: C:/Users/Samo/Desktop/tutorial-1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent15252 C:\Users\Samo\Desktop\tutorial-1\tutorial-1.xpr
+# Log file: C:/Users/Samo/Desktop/tutorial-1/vivado.log
+# Journal file: C:/Users/Samo/Desktop/tutorial-1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Samo/Desktop/tutorial-1/tutorial-1.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/AhmadSabbah/Downloads/lab-simplified/Lab2_handout/tutorial-1' since last save.
+Scanning sources...
+Finished scanning sources
+CRITICAL WARNING: [Board 49-67] The board_part definition was not found for em.avnet.com:minized:part0:1.2. This can happen sometimes when you use custom board part. You can resolve this issue by setting 'board.repoPaths' parameter, pointing to the location of custom board files. Valid board_part values can be retrieved with the 'get_board_parts' Tcl command.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
+WARNING: [BD 41-1661] One or more IPs have been locked in the design 'design_1.bd'. Please run report_ip_status for more details and recommendations on how to fix this issue.
+List of locked IPs:
+design_1_processing_system7_0_0
+
+open_project: Time (s): cpu = 00:00:32 ; elapsed = 00:00:18 . Memory (MB): peak = 682.727 ; gain = 116.301
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Nov 24 08:30:13 2025...

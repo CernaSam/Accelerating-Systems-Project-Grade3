@@ -2,19 +2,20 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="XPLAT_ZYNQ" key="selection"/>
+		<item value="Input" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="input"/>
+			<item value="Type_of_board"/>
+			<item value="Input_Pin"/>
 			<item value="XPlat_ZYNQ"/>
 			<item value="XPlat"/>
-			<item value="Input_Pin"/>
 			<item value="Input_"/>
 			<item value="Input"/>
 			<item value="You can"/>
-			<item value="you can"/>
 		</list>
 		<list key="replacehistory">
 		</list>

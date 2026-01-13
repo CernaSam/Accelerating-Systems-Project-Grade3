@@ -1,26 +1,30 @@
-21:46:03 **** Auto Build of configuration Debug for project project-emenist-on-ps ****
+22:51:22 **** Build of configuration Debug for project project-emenist-on-ps ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
 'Building file: ../src/main.c'
 'Invoking: ARM v7 g++ compiler'
 arm-none-eabi-g++ -Wall -O0 -g3 -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps\src" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps\src\Include" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps\src\TinyEngine\include" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps\src\TinyEngine\third_party\CMSIS_NN\Include" -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../project-emenist-on-ps_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:14:0:
+C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps\src\Include/genModel.h:12:17: warning: 'sbuf' defined but not used [-Wunused-variable]
+ static int16_t *sbuf = (int16_t *)&buffer[9408];
+                 ^~~~
+C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps\src\Include/genModel.h:11:21: warning: 'buffer0' defined but not used [-Wunused-variable]
+ static signed char *buffer0 = &buffer[0];
+                     ^~~~~~~
 'Finished building: ../src/main.c'
 ' '
 'Building target: project-emenist-on-ps.elf'
 'Invoking: ARM v7 g++ linker'
 arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../project-emenist-on-ps_bsp/ps7_cortexa9_0/lib -o "project-emenist-on-ps.elf"  ./src/TinyEngine/third_party/CMSIS_NN/Source/arm_softmax_s8.o  ./src/TinyEngine/src/convolve_1x1_s8.o ./src/TinyEngine/src/convolve_s8_kernel3_stride1_pad1.o ./src/TinyEngine/src/convolve_s8_kernel3_stride2_padoffset1_oddch.o ./src/TinyEngine/src/mat_mult_kernels.o ./src/TinyEngine/src/reduce.o ./src/TinyEngine/src/requantize.o ./src/TinyEngine/src/softmax_int8.o  ./src/Source/depthwise_kernel3x3_stride1_pad1_padoffset0_inplace_CHW.o ./src/Source/depthwise_kernel3x3_stride2_pad0_padoffset1_inplace_CHW.o ./src/Source/genModel.o  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
-./src/main.o: In function `getInput()':
-C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps\Debug/../src/Source/genModel.c:8: multiple definition of `getInput()'
-./src/Source/genModel.o:C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps\Debug/../src/Source/genModel.c:8: first defined here
-./src/main.o: In function `getOutput()':
-C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps\Debug/../src/Source/genModel.c:11: multiple definition of `getOutput()'
-./src/Source/genModel.o:C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps\Debug/../src/Source/genModel.c:11: first defined here
-./src/main.o: In function `invoke_inf()':
-C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps\Debug/../src/Source/genModel.c:15: multiple definition of `invoke_inf()'
-./src/Source/genModel.o:C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps\Debug/../src/Source/genModel.c:15: first defined here
-collect2.exe: error: ld returned 1 exit status
-make: *** [makefile:56: project-emenist-on-ps.elf] Error 1
+'Finished building target: project-emenist-on-ps.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size project-emenist-on-ps.elf  |tee "project-emenist-on-ps.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 141728	   2592	  43304	 187624	  2dce8	project-emenist-on-ps.elf
+'Finished building: project-emenist-on-ps.elf.size'
+' '
 
-21:46:04 Build Finished (took 1s.214ms)
+22:51:24 Build Finished (took 1s.393ms)
 

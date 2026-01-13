@@ -24,3 +24,11 @@ launch_sdk -workspace C:/Users/Samo/Desktop/tutorial-1/tutorial-1.sdk -hwspec C:
 INFO: [Vivado 12-393] Launching SDK...
 INFO: [Vivado 12-417] Running xsdk -workspace C:/Users/Samo/Desktop/tutorial-1/tutorial-1.sdk -hwspec C:/Users/Samo/Desktop/tutorial-1/tutorial-1.sdk/design_1_wrapper.hdf
 INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+launch_sdk -workspace C:/Users/Samo/Desktop/tutorial-1/tutorial-1.sdk -hwspec C:/Users/Samo/Desktop/tutorial-1/tutorial-1.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace C:/Users/Samo/Desktop/tutorial-1/tutorial-1.sdk -hwspec C:/Users/Samo/Desktop/tutorial-1/tutorial-1.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+launch_sdk -workspace C:/Users/Samo/Desktop/tutorial-1/tutorial-1.sdk -hwspec C:/Users/Samo/Desktop/tutorial-1/tutorial-1.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace C:/Users/Samo/Desktop/tutorial-1/tutorial-1.sdk -hwspec C:/Users/Samo/Desktop/tutorial-1/tutorial-1.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.

@@ -1,0 +1,108 @@
+22:54:17 **** Build of configuration Debug for project project-emenist-on-ps-fucked ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/TinyEngine/third_party/CMSIS_NN/Source/arm_softmax_s8.c'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src\Include" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src\TinyEngine\include" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src\TinyEngine\third_party\CMSIS_NN\Include" -c -fmessage-length=0 -MT"src/TinyEngine/third_party/CMSIS_NN/Source/arm_softmax_s8.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../project-emenist-on-ps_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/TinyEngine/third_party/CMSIS_NN/Source/arm_softmax_s8.d" -MT"src/TinyEngine/third_party/CMSIS_NN/Source/arm_softmax_s8.o" -o "src/TinyEngine/third_party/CMSIS_NN/Source/arm_softmax_s8.o" "../src/TinyEngine/third_party/CMSIS_NN/Source/arm_softmax_s8.c"
+'Finished building: ../src/TinyEngine/third_party/CMSIS_NN/Source/arm_softmax_s8.c'
+' '
+'Building file: ../src/TinyEngine/src/convolve_1x1_s8.c'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src\Include" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src\TinyEngine\include" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src\TinyEngine\third_party\CMSIS_NN\Include" -c -fmessage-length=0 -MT"src/TinyEngine/src/convolve_1x1_s8.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../project-emenist-on-ps_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/TinyEngine/src/convolve_1x1_s8.d" -MT"src/TinyEngine/src/convolve_1x1_s8.o" -o "src/TinyEngine/src/convolve_1x1_s8.o" "../src/TinyEngine/src/convolve_1x1_s8.c"
+'Finished building: ../src/TinyEngine/src/convolve_1x1_s8.c'
+' '
+'Building file: ../src/TinyEngine/src/convolve_s8_kernel3_stride1_pad1.c'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src\Include" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src\TinyEngine\include" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src\TinyEngine\third_party\CMSIS_NN\Include" -c -fmessage-length=0 -MT"src/TinyEngine/src/convolve_s8_kernel3_stride1_pad1.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../project-emenist-on-ps_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/TinyEngine/src/convolve_s8_kernel3_stride1_pad1.d" -MT"src/TinyEngine/src/convolve_s8_kernel3_stride1_pad1.o" -o "src/TinyEngine/src/convolve_s8_kernel3_stride1_pad1.o" "../src/TinyEngine/src/convolve_s8_kernel3_stride1_pad1.c"
+../src/TinyEngine/src/convolve_s8_kernel3_stride1_pad1.c: In function 'tinyengine_status convolve_s8_kernel3_stride1_pad1(const int8_t*, uint16_t, uint16_t, uint16_t, const int8_t*, const int32_t*, const int32_t*, const int32_t*, int32_t, int32_t, int32_t, int32_t, int8_t*, uint16_t, uint16_t, uint16_t, int16_t*, int8_t)':
+../src/TinyEngine/src/convolve_s8_kernel3_stride1_pad1.c:34:10: warning: unused variable 'bytes' [-Wunused-variable]
+  int8_t* bytes = (int8_t*)&pad_out_q15x2;
+          ^~~~~
+'Finished building: ../src/TinyEngine/src/convolve_s8_kernel3_stride1_pad1.c'
+' '
+'Building file: ../src/TinyEngine/src/convolve_s8_kernel3_stride2_padoffset1_oddch.c'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src\Include" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src\TinyEngine\include" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src\TinyEngine\third_party\CMSIS_NN\Include" -c -fmessage-length=0 -MT"src/TinyEngine/src/convolve_s8_kernel3_stride2_padoffset1_oddch.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../project-emenist-on-ps_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/TinyEngine/src/convolve_s8_kernel3_stride2_padoffset1_oddch.d" -MT"src/TinyEngine/src/convolve_s8_kernel3_stride2_padoffset1_oddch.o" -o "src/TinyEngine/src/convolve_s8_kernel3_stride2_padoffset1_oddch.o" "../src/TinyEngine/src/convolve_s8_kernel3_stride2_padoffset1_oddch.c"
+../src/TinyEngine/src/convolve_s8_kernel3_stride2_padoffset1_oddch.c: In function 'tinyengine_status convolve_s8_kernel3_stride2_padoffset1_oddch(const int8_t*, uint16_t, uint16_t, uint16_t, const int8_t*, const int32_t*, const int32_t*, const int32_t*, int32_t, int32_t, int32_t, int32_t, int8_t*, uint16_t, uint16_t, uint16_t, int16_t*, int8_t)':
+../src/TinyEngine/src/convolve_s8_kernel3_stride2_padoffset1_oddch.c:23:12: warning: unused variable 'channel_div4' [-Wunused-variable]
+  const int channel_div4 = (input_ch >> 2);
+            ^~~~~~~~~~~~
+../src/TinyEngine/src/convolve_s8_kernel3_stride2_padoffset1_oddch.c:24:12: warning: unused variable 'channel_div2' [-Wunused-variable]
+  const int channel_div2 = (input_ch >> 1);
+            ^~~~~~~~~~~~
+'Finished building: ../src/TinyEngine/src/convolve_s8_kernel3_stride2_padoffset1_oddch.c'
+' '
+'Building file: ../src/TinyEngine/src/mat_mult_kernels.c'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src\Include" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src\TinyEngine\include" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src\TinyEngine\third_party\CMSIS_NN\Include" -c -fmessage-length=0 -MT"src/TinyEngine/src/mat_mult_kernels.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../project-emenist-on-ps_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/TinyEngine/src/mat_mult_kernels.d" -MT"src/TinyEngine/src/mat_mult_kernels.o" -o "src/TinyEngine/src/mat_mult_kernels.o" "../src/TinyEngine/src/mat_mult_kernels.c"
+'Finished building: ../src/TinyEngine/src/mat_mult_kernels.c'
+' '
+'Building file: ../src/TinyEngine/src/reduce.c'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src\Include" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src\TinyEngine\include" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src\TinyEngine\third_party\CMSIS_NN\Include" -c -fmessage-length=0 -MT"src/TinyEngine/src/reduce.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../project-emenist-on-ps_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/TinyEngine/src/reduce.d" -MT"src/TinyEngine/src/reduce.o" -o "src/TinyEngine/src/reduce.o" "../src/TinyEngine/src/reduce.c"
+../src/TinyEngine/src/reduce.c: In function 'tinyengine_status reduce_mean_axis_1_2_int8(const int8_t*, uint16_t, uint16_t, uint16_t, int32_t, int32_t, int32_t, int32_t, int32_t, int32_t, int8_t*)':
+../src/TinyEngine/src/reduce.c:28:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/TinyEngine/src/reduce.c'
+' '
+'Building file: ../src/TinyEngine/src/requantize.c'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src\Include" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src\TinyEngine\include" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src\TinyEngine\third_party\CMSIS_NN\Include" -c -fmessage-length=0 -MT"src/TinyEngine/src/requantize.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../project-emenist-on-ps_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/TinyEngine/src/requantize.d" -MT"src/TinyEngine/src/requantize.o" -o "src/TinyEngine/src/requantize.o" "../src/TinyEngine/src/requantize.c"
+../src/TinyEngine/src/requantize.c: In function 'tinyengine_status requantize_uint8_to_int8(const char*, uint16_t, int32_t, int32_t, int32_t, int32_t, int32_t, int32_t, int8_t*)':
+../src/TinyEngine/src/requantize.c:25:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/TinyEngine/src/requantize.c'
+' '
+'Building file: ../src/TinyEngine/src/softmax_int8.c'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src\Include" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src\TinyEngine\include" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src\TinyEngine\third_party\CMSIS_NN\Include" -c -fmessage-length=0 -MT"src/TinyEngine/src/softmax_int8.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../project-emenist-on-ps_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/TinyEngine/src/softmax_int8.d" -MT"src/TinyEngine/src/softmax_int8.o" -o "src/TinyEngine/src/softmax_int8.o" "../src/TinyEngine/src/softmax_int8.c"
+../src/TinyEngine/src/softmax_int8.c: In function 'tinyengine_status softmax_int8(int8_t*, uint16_t, int32_t, int32_t, int32_t, int8_t*)':
+../src/TinyEngine/src/softmax_int8.c:12:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/TinyEngine/src/softmax_int8.c'
+' '
+'Building file: ../src/Source/depthwise_kernel3x3_stride1_pad1_padoffset0_inplace_CHW.c'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src\Include" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src\TinyEngine\include" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src\TinyEngine\third_party\CMSIS_NN\Include" -c -fmessage-length=0 -MT"src/Source/depthwise_kernel3x3_stride1_pad1_padoffset0_inplace_CHW.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../project-emenist-on-ps_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/Source/depthwise_kernel3x3_stride1_pad1_padoffset0_inplace_CHW.d" -MT"src/Source/depthwise_kernel3x3_stride1_pad1_padoffset0_inplace_CHW.o" -o "src/Source/depthwise_kernel3x3_stride1_pad1_padoffset0_inplace_CHW.o" "../src/Source/depthwise_kernel3x3_stride1_pad1_padoffset0_inplace_CHW.c"
+'Finished building: ../src/Source/depthwise_kernel3x3_stride1_pad1_padoffset0_inplace_CHW.c'
+' '
+'Building file: ../src/Source/depthwise_kernel3x3_stride2_pad0_padoffset1_inplace_CHW.c'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src\Include" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src\TinyEngine\include" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src\TinyEngine\third_party\CMSIS_NN\Include" -c -fmessage-length=0 -MT"src/Source/depthwise_kernel3x3_stride2_pad0_padoffset1_inplace_CHW.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../project-emenist-on-ps_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/Source/depthwise_kernel3x3_stride2_pad0_padoffset1_inplace_CHW.d" -MT"src/Source/depthwise_kernel3x3_stride2_pad0_padoffset1_inplace_CHW.o" -o "src/Source/depthwise_kernel3x3_stride2_pad0_padoffset1_inplace_CHW.o" "../src/Source/depthwise_kernel3x3_stride2_pad0_padoffset1_inplace_CHW.c"
+'Finished building: ../src/Source/depthwise_kernel3x3_stride2_pad0_padoffset1_inplace_CHW.c'
+' '
+'Building file: ../src/Source/genModel.c'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src\Include" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src\TinyEngine\include" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src\TinyEngine\third_party\CMSIS_NN\Include" -c -fmessage-length=0 -MT"src/Source/genModel.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../project-emenist-on-ps_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/Source/genModel.d" -MT"src/Source/genModel.o" -o "src/Source/genModel.o" "../src/Source/genModel.c"
+'Finished building: ../src/Source/genModel.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src\Include" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src\TinyEngine\include" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src\TinyEngine\third_party\CMSIS_NN\Include" -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../project-emenist-on-ps_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:14:0:
+C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src\Include/genModel.h:12:17: warning: 'sbuf' defined but not used [-Wunused-variable]
+ static int16_t *sbuf = (int16_t *)&buffer[9408];
+                 ^~~~
+C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src\Include/genModel.h:11:21: warning: 'buffer0' defined but not used [-Wunused-variable]
+ static signed char *buffer0 = &buffer[0];
+                     ^~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: project-emenist-on-ps-fucked.elf'
+'Invoking: ARM v7 g++ linker'
+arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../project-emenist-on-ps_bsp/ps7_cortexa9_0/lib -o "project-emenist-on-ps-fucked.elf"  ./src/TinyEngine/third_party/CMSIS_NN/Source/arm_softmax_s8.o  ./src/TinyEngine/src/convolve_1x1_s8.o ./src/TinyEngine/src/convolve_s8_kernel3_stride1_pad1.o ./src/TinyEngine/src/convolve_s8_kernel3_stride2_padoffset1_oddch.o ./src/TinyEngine/src/mat_mult_kernels.o ./src/TinyEngine/src/reduce.o ./src/TinyEngine/src/requantize.o ./src/TinyEngine/src/softmax_int8.o  ./src/Source/depthwise_kernel3x3_stride1_pad1_padoffset0_inplace_CHW.o ./src/Source/depthwise_kernel3x3_stride2_pad0_padoffset1_inplace_CHW.o ./src/Source/genModel.o  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: project-emenist-on-ps-fucked.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size project-emenist-on-ps-fucked.elf  |tee "project-emenist-on-ps-fucked.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 141728	   2592	  43304	 187624	  2dce8	project-emenist-on-ps-fucked.elf
+'Finished building: project-emenist-on-ps-fucked.elf.size'
+' '
+
+22:54:24 Build Finished (took 6s.501ms)
+

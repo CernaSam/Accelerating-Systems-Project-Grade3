@@ -1,155 +1,39 @@
-21:32:39 **** Clean-only build of configuration Debug for project project-emenist-on-ps ****
-make clean 
-rm -rf  ./src/TinyEngine/third_party/CMSIS_NN/Source/arm_softmax_s8.o  ./src/TinyEngine/src/convolve_1x1_s8.o ./src/TinyEngine/src/convolve_s8_kernel3_stride1_pad1.o ./src/TinyEngine/src/convolve_s8_kernel3_stride2_padoffset1_oddch.o ./src/TinyEngine/src/mat_mult_kernels.o ./src/TinyEngine/src/reduce.o ./src/TinyEngine/src/requantize.o ./src/TinyEngine/src/softmax_int8.o  ./src/Source/depthwise_kernel3x3_stride1_pad1_padoffset0_inplace_CHW.o ./src/Source/depthwise_kernel3x3_stride2_pad0_padoffset1_inplace_CHW.o ./src/Source/genModel.o  ./src/TinyEngine/third_party/CMSIS_NN/Source/arm_softmax_s8.d  ./src/TinyEngine/src/convolve_1x1_s8.d ./src/TinyEngine/src/convolve_s8_kernel3_stride1_pad1.d ./src/TinyEngine/src/convolve_s8_kernel3_stride2_padoffset1_oddch.d ./src/TinyEngine/src/mat_mult_kernels.d ./src/TinyEngine/src/reduce.d ./src/TinyEngine/src/requantize.d ./src/TinyEngine/src/softmax_int8.d  ./src/Source/depthwise_kernel3x3_stride1_pad1_padoffset0_inplace_CHW.d ./src/Source/depthwise_kernel3x3_stride2_pad0_padoffset1_inplace_CHW.d ./src/Source/genModel.d  project-emenist-on-ps.elf.size  project-emenist-on-ps.elf
+22:52:23 **** Incremental Build of configuration Debug for project new-toutorial-1 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
 ' '
-21:32:39 **** Clean-only build of project project-emenist-on-ps_bsp ****
-make -k clean 
-make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s clean 
-make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src -s clean 
-make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s clean 
-make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s clean 
-make -C ps7_cortexa9_0/libsrc/dmaps_v2_4/src -s clean 
-make -C ps7_cortexa9_0/libsrc/gpiops_v3_4/src -s clean 
-make -C ps7_cortexa9_0/libsrc/iicps_v3_8/src -s clean 
-make -C ps7_cortexa9_0/libsrc/qspips_v3_5/src -s clean 
-make -C ps7_cortexa9_0/libsrc/scugic_v3_10/src -s clean 
-make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s clean 
-make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s clean 
-make -C ps7_cortexa9_0/libsrc/sdps_v3_6/src -s clean 
-make -C ps7_cortexa9_0/libsrc/standalone_v6_8/src -s clean 
-make -C ps7_cortexa9_0/libsrc/uartps_v3_7/src -s clean 
-make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s clean 
-make -C ps7_cortexa9_0/libsrc/xadcps_v2_3/src -s clean 
-rm -f ps7_cortexa9_0/lib/libxil.a
-21:32:41 **** Build of project project-emenist-on-ps_bsp ****
-make -k all 
-"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
-make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src"
-make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
-make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
-make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_4/src"
-make -C ps7_cortexa9_0/libsrc/dmaps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_4/src"
-make -C ps7_cortexa9_0/libsrc/gpiops_v3_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/iicps_v3_8/src"
-make -C ps7_cortexa9_0/libsrc/iicps_v3_8/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_5/src"
-make -C ps7_cortexa9_0/libsrc/qspips_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_10/src"
-make -C ps7_cortexa9_0/libsrc/scugic_v3_10/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
-make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
-make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/sdps_v3_6/src"
-make -C ps7_cortexa9_0/libsrc/sdps_v3_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/standalone_v6_8/src"
-make -C ps7_cortexa9_0/libsrc/standalone_v6_8/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_7/src"
-make -C ps7_cortexa9_0/libsrc/uartps_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
-make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_3/src"
-make -C ps7_cortexa9_0/libsrc/xadcps_v2_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
-make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Compiling coresightps_dcc"
-arm-none-eabi-ar: creating ../../../lib/libxil.a
-"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src"
-make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Compiling cpu_cortexa9"
-"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
-make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Compiling ddrps"
-"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
-make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Compiling devcfg"
-"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_4/src"
-make -C ps7_cortexa9_0/libsrc/dmaps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Compiling dmaps"
-"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_4/src"
-make -C ps7_cortexa9_0/libsrc/gpiops_v3_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Compiling gpiops"
-"Running Make libs in ps7_cortexa9_0/libsrc/iicps_v3_8/src"
-make -C ps7_cortexa9_0/libsrc/iicps_v3_8/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Compiling iicps"
-"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_5/src"
-make -C ps7_cortexa9_0/libsrc/qspips_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Compiling qspips"
-"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_10/src"
-make -C ps7_cortexa9_0/libsrc/scugic_v3_10/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Compiling scugic"
-"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
-make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Compiling scutimer"
-"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
-make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Compiling scuwdt"
-"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v3_6/src"
-make -C ps7_cortexa9_0/libsrc/sdps_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Compiling sdps"
-"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v6_8/src"
-make -C ps7_cortexa9_0/libsrc/standalone_v6_8/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Compiling standalone"
-In file included from usleep.c:56:0:
-xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
- #pragma message ("For the sleep routines, Global timer is being used")
-         ^~~~~~~
-In file included from xil_sleeptimer.c:51:0:
-xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
- #pragma message ("For the sleep routines, Global timer is being used")
-         ^~~~~~~
-In file included from xtime_l.c:49:0:
-xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
- #pragma message ("For the sleep routines, Global timer is being used")
-         ^~~~~~~
-In file included from sleep.c:53:0:
-xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
- #pragma message ("For the sleep routines, Global timer is being used")
-         ^~~~~~~
-"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_7/src"
-make -C ps7_cortexa9_0/libsrc/uartps_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Compiling uartps"
-"Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
-make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Compiling usbps"
-"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_3/src"
-make -C ps7_cortexa9_0/libsrc/xadcps_v2_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Compiling xadcps"
-'Finished building libraries'
-21:33:07 **** Build of configuration Debug for project project-emenist-on-ps ****
+make: Nothing to be done for 'main-build'.
+22:52:39 **** Incremental Build of configuration Debug for project new-toutorial-1 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+22:52:50 **** Incremental Build of configuration Debug for project new-toutorial-1 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+22:54:17 **** Clean-only build of configuration Debug for project project-emenist-on-ps-fucked ****
+make clean 
+rm -rf  ./src/TinyEngine/third_party/CMSIS_NN/Source/arm_softmax_s8.o  ./src/TinyEngine/src/convolve_1x1_s8.o ./src/TinyEngine/src/convolve_s8_kernel3_stride1_pad1.o ./src/TinyEngine/src/convolve_s8_kernel3_stride2_padoffset1_oddch.o ./src/TinyEngine/src/mat_mult_kernels.o ./src/TinyEngine/src/reduce.o ./src/TinyEngine/src/requantize.o ./src/TinyEngine/src/softmax_int8.o  ./src/Source/depthwise_kernel3x3_stride1_pad1_padoffset0_inplace_CHW.o ./src/Source/depthwise_kernel3x3_stride2_pad0_padoffset1_inplace_CHW.o ./src/Source/genModel.o  ./src/main.o  ./src/TinyEngine/third_party/CMSIS_NN/Source/arm_softmax_s8.d  ./src/TinyEngine/src/convolve_1x1_s8.d ./src/TinyEngine/src/convolve_s8_kernel3_stride1_pad1.d ./src/TinyEngine/src/convolve_s8_kernel3_stride2_padoffset1_oddch.d ./src/TinyEngine/src/mat_mult_kernels.d ./src/TinyEngine/src/reduce.d ./src/TinyEngine/src/requantize.d ./src/TinyEngine/src/softmax_int8.d  ./src/Source/depthwise_kernel3x3_stride1_pad1_padoffset0_inplace_CHW.d ./src/Source/depthwise_kernel3x3_stride2_pad0_padoffset1_inplace_CHW.d ./src/Source/genModel.d  ./src/main.d  project-emenist-on-ps.elf.size  project-emenist-on-ps.elf
+' '
+22:54:17 **** Build of configuration Debug for project project-emenist-on-ps-fucked ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
 'Building file: ../src/TinyEngine/third_party/CMSIS_NN/Source/arm_softmax_s8.c'
 'Invoking: ARM v7 g++ compiler'
-arm-none-eabi-g++ -Wall -O0 -g3 -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps\src" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps\src\Include" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps\src\TinyEngine\include" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps\src\TinyEngine\third_party\CMSIS_NN\Include" -c -fmessage-length=0 -MT"src/TinyEngine/third_party/CMSIS_NN/Source/arm_softmax_s8.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../project-emenist-on-ps_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/TinyEngine/third_party/CMSIS_NN/Source/arm_softmax_s8.d" -MT"src/TinyEngine/third_party/CMSIS_NN/Source/arm_softmax_s8.o" -o "src/TinyEngine/third_party/CMSIS_NN/Source/arm_softmax_s8.o" "../src/TinyEngine/third_party/CMSIS_NN/Source/arm_softmax_s8.c"
+arm-none-eabi-g++ -Wall -O0 -g3 -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src\Include" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src\TinyEngine\include" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src\TinyEngine\third_party\CMSIS_NN\Include" -c -fmessage-length=0 -MT"src/TinyEngine/third_party/CMSIS_NN/Source/arm_softmax_s8.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../project-emenist-on-ps_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/TinyEngine/third_party/CMSIS_NN/Source/arm_softmax_s8.d" -MT"src/TinyEngine/third_party/CMSIS_NN/Source/arm_softmax_s8.o" -o "src/TinyEngine/third_party/CMSIS_NN/Source/arm_softmax_s8.o" "../src/TinyEngine/third_party/CMSIS_NN/Source/arm_softmax_s8.c"
 'Finished building: ../src/TinyEngine/third_party/CMSIS_NN/Source/arm_softmax_s8.c'
 ' '
 'Building file: ../src/TinyEngine/src/convolve_1x1_s8.c'
 'Invoking: ARM v7 g++ compiler'
-arm-none-eabi-g++ -Wall -O0 -g3 -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps\src" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps\src\Include" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps\src\TinyEngine\include" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps\src\TinyEngine\third_party\CMSIS_NN\Include" -c -fmessage-length=0 -MT"src/TinyEngine/src/convolve_1x1_s8.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../project-emenist-on-ps_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/TinyEngine/src/convolve_1x1_s8.d" -MT"src/TinyEngine/src/convolve_1x1_s8.o" -o "src/TinyEngine/src/convolve_1x1_s8.o" "../src/TinyEngine/src/convolve_1x1_s8.c"
-../src/TinyEngine/src/convolve_1x1_s8.c: In function 'tinyengine_status convolve_1x1_s8(const int8_t*, uint16_t, uint16_t, uint16_t, const int8_t*, const int32_t*, const int32_t*, const int32_t*, int32_t, int32_t, int32_t, int32_t, int8_t*, uint16_t, uint16_t, uint16_t, int16_t*)':
-../src/TinyEngine/src/convolve_1x1_s8.c:26:17: error: invalid conversion from 'const int8_t* {aka const signed char*}' to 'int8_t* {aka signed char*}' [-fpermissive]
-   int8_t *src = &input[i_element * input_ch];
-                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
-make: *** [src/TinyEngine/src/subdir.mk:38: src/TinyEngine/src/convolve_1x1_s8.o] Error 1
-21:36:26 **** Auto Build of configuration Debug for project project-emenist-on-ps ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/TinyEngine/src/convolve_1x1_s8.c'
-'Invoking: ARM v7 g++ compiler'
-arm-none-eabi-g++ -Wall -O0 -g3 -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps\src" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps\src\Include" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps\src\TinyEngine\include" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps\src\TinyEngine\third_party\CMSIS_NN\Include" -c -fmessage-length=0 -MT"src/TinyEngine/src/convolve_1x1_s8.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../project-emenist-on-ps_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/TinyEngine/src/convolve_1x1_s8.d" -MT"src/TinyEngine/src/convolve_1x1_s8.o" -o "src/TinyEngine/src/convolve_1x1_s8.o" "../src/TinyEngine/src/convolve_1x1_s8.c"
+arm-none-eabi-g++ -Wall -O0 -g3 -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src\Include" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src\TinyEngine\include" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src\TinyEngine\third_party\CMSIS_NN\Include" -c -fmessage-length=0 -MT"src/TinyEngine/src/convolve_1x1_s8.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../project-emenist-on-ps_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/TinyEngine/src/convolve_1x1_s8.d" -MT"src/TinyEngine/src/convolve_1x1_s8.o" -o "src/TinyEngine/src/convolve_1x1_s8.o" "../src/TinyEngine/src/convolve_1x1_s8.c"
 'Finished building: ../src/TinyEngine/src/convolve_1x1_s8.c'
 ' '
 'Building file: ../src/TinyEngine/src/convolve_s8_kernel3_stride1_pad1.c'
 'Invoking: ARM v7 g++ compiler'
-arm-none-eabi-g++ -Wall -O0 -g3 -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps\src" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps\src\Include" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps\src\TinyEngine\include" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps\src\TinyEngine\third_party\CMSIS_NN\Include" -c -fmessage-length=0 -MT"src/TinyEngine/src/convolve_s8_kernel3_stride1_pad1.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../project-emenist-on-ps_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/TinyEngine/src/convolve_s8_kernel3_stride1_pad1.d" -MT"src/TinyEngine/src/convolve_s8_kernel3_stride1_pad1.o" -o "src/TinyEngine/src/convolve_s8_kernel3_stride1_pad1.o" "../src/TinyEngine/src/convolve_s8_kernel3_stride1_pad1.c"
+arm-none-eabi-g++ -Wall -O0 -g3 -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src\Include" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src\TinyEngine\include" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src\TinyEngine\third_party\CMSIS_NN\Include" -c -fmessage-length=0 -MT"src/TinyEngine/src/convolve_s8_kernel3_stride1_pad1.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../project-emenist-on-ps_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/TinyEngine/src/convolve_s8_kernel3_stride1_pad1.d" -MT"src/TinyEngine/src/convolve_s8_kernel3_stride1_pad1.o" -o "src/TinyEngine/src/convolve_s8_kernel3_stride1_pad1.o" "../src/TinyEngine/src/convolve_s8_kernel3_stride1_pad1.c"
 ../src/TinyEngine/src/convolve_s8_kernel3_stride1_pad1.c: In function 'tinyengine_status convolve_s8_kernel3_stride1_pad1(const int8_t*, uint16_t, uint16_t, uint16_t, const int8_t*, const int32_t*, const int32_t*, const int32_t*, int32_t, int32_t, int32_t, int32_t, int8_t*, uint16_t, uint16_t, uint16_t, int16_t*, int8_t)':
 ../src/TinyEngine/src/convolve_s8_kernel3_stride1_pad1.c:34:10: warning: unused variable 'bytes' [-Wunused-variable]
   int8_t* bytes = (int8_t*)&pad_out_q15x2;
@@ -158,7 +42,7 @@ arm-none-eabi-g++ -Wall -O0 -g3 -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.s
 ' '
 'Building file: ../src/TinyEngine/src/convolve_s8_kernel3_stride2_padoffset1_oddch.c'
 'Invoking: ARM v7 g++ compiler'
-arm-none-eabi-g++ -Wall -O0 -g3 -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps\src" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps\src\Include" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps\src\TinyEngine\include" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps\src\TinyEngine\third_party\CMSIS_NN\Include" -c -fmessage-length=0 -MT"src/TinyEngine/src/convolve_s8_kernel3_stride2_padoffset1_oddch.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../project-emenist-on-ps_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/TinyEngine/src/convolve_s8_kernel3_stride2_padoffset1_oddch.d" -MT"src/TinyEngine/src/convolve_s8_kernel3_stride2_padoffset1_oddch.o" -o "src/TinyEngine/src/convolve_s8_kernel3_stride2_padoffset1_oddch.o" "../src/TinyEngine/src/convolve_s8_kernel3_stride2_padoffset1_oddch.c"
+arm-none-eabi-g++ -Wall -O0 -g3 -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src\Include" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src\TinyEngine\include" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src\TinyEngine\third_party\CMSIS_NN\Include" -c -fmessage-length=0 -MT"src/TinyEngine/src/convolve_s8_kernel3_stride2_padoffset1_oddch.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../project-emenist-on-ps_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/TinyEngine/src/convolve_s8_kernel3_stride2_padoffset1_oddch.d" -MT"src/TinyEngine/src/convolve_s8_kernel3_stride2_padoffset1_oddch.o" -o "src/TinyEngine/src/convolve_s8_kernel3_stride2_padoffset1_oddch.o" "../src/TinyEngine/src/convolve_s8_kernel3_stride2_padoffset1_oddch.c"
 ../src/TinyEngine/src/convolve_s8_kernel3_stride2_padoffset1_oddch.c: In function 'tinyengine_status convolve_s8_kernel3_stride2_padoffset1_oddch(const int8_t*, uint16_t, uint16_t, uint16_t, const int8_t*, const int32_t*, const int32_t*, const int32_t*, int32_t, int32_t, int32_t, int32_t, int8_t*, uint16_t, uint16_t, uint16_t, int16_t*, int8_t)':
 ../src/TinyEngine/src/convolve_s8_kernel3_stride2_padoffset1_oddch.c:23:12: warning: unused variable 'channel_div4' [-Wunused-variable]
   const int channel_div4 = (input_ch >> 2);
@@ -170,12 +54,12 @@ arm-none-eabi-g++ -Wall -O0 -g3 -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.s
 ' '
 'Building file: ../src/TinyEngine/src/mat_mult_kernels.c'
 'Invoking: ARM v7 g++ compiler'
-arm-none-eabi-g++ -Wall -O0 -g3 -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps\src" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps\src\Include" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps\src\TinyEngine\include" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps\src\TinyEngine\third_party\CMSIS_NN\Include" -c -fmessage-length=0 -MT"src/TinyEngine/src/mat_mult_kernels.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../project-emenist-on-ps_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/TinyEngine/src/mat_mult_kernels.d" -MT"src/TinyEngine/src/mat_mult_kernels.o" -o "src/TinyEngine/src/mat_mult_kernels.o" "../src/TinyEngine/src/mat_mult_kernels.c"
+arm-none-eabi-g++ -Wall -O0 -g3 -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src\Include" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src\TinyEngine\include" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src\TinyEngine\third_party\CMSIS_NN\Include" -c -fmessage-length=0 -MT"src/TinyEngine/src/mat_mult_kernels.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../project-emenist-on-ps_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/TinyEngine/src/mat_mult_kernels.d" -MT"src/TinyEngine/src/mat_mult_kernels.o" -o "src/TinyEngine/src/mat_mult_kernels.o" "../src/TinyEngine/src/mat_mult_kernels.c"
 'Finished building: ../src/TinyEngine/src/mat_mult_kernels.c'
 ' '
 'Building file: ../src/TinyEngine/src/reduce.c'
 'Invoking: ARM v7 g++ compiler'
-arm-none-eabi-g++ -Wall -O0 -g3 -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps\src" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps\src\Include" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps\src\TinyEngine\include" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps\src\TinyEngine\third_party\CMSIS_NN\Include" -c -fmessage-length=0 -MT"src/TinyEngine/src/reduce.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../project-emenist-on-ps_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/TinyEngine/src/reduce.d" -MT"src/TinyEngine/src/reduce.o" -o "src/TinyEngine/src/reduce.o" "../src/TinyEngine/src/reduce.c"
+arm-none-eabi-g++ -Wall -O0 -g3 -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src\Include" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src\TinyEngine\include" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src\TinyEngine\third_party\CMSIS_NN\Include" -c -fmessage-length=0 -MT"src/TinyEngine/src/reduce.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../project-emenist-on-ps_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/TinyEngine/src/reduce.d" -MT"src/TinyEngine/src/reduce.o" -o "src/TinyEngine/src/reduce.o" "../src/TinyEngine/src/reduce.c"
 ../src/TinyEngine/src/reduce.c: In function 'tinyengine_status reduce_mean_axis_1_2_int8(const int8_t*, uint16_t, uint16_t, uint16_t, int32_t, int32_t, int32_t, int32_t, int32_t, int32_t, int8_t*)':
 ../src/TinyEngine/src/reduce.c:28:1: warning: no return statement in function returning non-void [-Wreturn-type]
  }
@@ -184,7 +68,7 @@ arm-none-eabi-g++ -Wall -O0 -g3 -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.s
 ' '
 'Building file: ../src/TinyEngine/src/requantize.c'
 'Invoking: ARM v7 g++ compiler'
-arm-none-eabi-g++ -Wall -O0 -g3 -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps\src" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps\src\Include" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps\src\TinyEngine\include" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps\src\TinyEngine\third_party\CMSIS_NN\Include" -c -fmessage-length=0 -MT"src/TinyEngine/src/requantize.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../project-emenist-on-ps_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/TinyEngine/src/requantize.d" -MT"src/TinyEngine/src/requantize.o" -o "src/TinyEngine/src/requantize.o" "../src/TinyEngine/src/requantize.c"
+arm-none-eabi-g++ -Wall -O0 -g3 -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src\Include" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src\TinyEngine\include" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src\TinyEngine\third_party\CMSIS_NN\Include" -c -fmessage-length=0 -MT"src/TinyEngine/src/requantize.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../project-emenist-on-ps_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/TinyEngine/src/requantize.d" -MT"src/TinyEngine/src/requantize.o" -o "src/TinyEngine/src/requantize.o" "../src/TinyEngine/src/requantize.c"
 ../src/TinyEngine/src/requantize.c: In function 'tinyengine_status requantize_uint8_to_int8(const char*, uint16_t, int32_t, int32_t, int32_t, int32_t, int32_t, int32_t, int8_t*)':
 ../src/TinyEngine/src/requantize.c:25:1: warning: no return statement in function returning non-void [-Wreturn-type]
  }
@@ -193,7 +77,7 @@ arm-none-eabi-g++ -Wall -O0 -g3 -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.s
 ' '
 'Building file: ../src/TinyEngine/src/softmax_int8.c'
 'Invoking: ARM v7 g++ compiler'
-arm-none-eabi-g++ -Wall -O0 -g3 -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps\src" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps\src\Include" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps\src\TinyEngine\include" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps\src\TinyEngine\third_party\CMSIS_NN\Include" -c -fmessage-length=0 -MT"src/TinyEngine/src/softmax_int8.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../project-emenist-on-ps_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/TinyEngine/src/softmax_int8.d" -MT"src/TinyEngine/src/softmax_int8.o" -o "src/TinyEngine/src/softmax_int8.o" "../src/TinyEngine/src/softmax_int8.c"
+arm-none-eabi-g++ -Wall -O0 -g3 -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src\Include" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src\TinyEngine\include" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src\TinyEngine\third_party\CMSIS_NN\Include" -c -fmessage-length=0 -MT"src/TinyEngine/src/softmax_int8.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../project-emenist-on-ps_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/TinyEngine/src/softmax_int8.d" -MT"src/TinyEngine/src/softmax_int8.o" -o "src/TinyEngine/src/softmax_int8.o" "../src/TinyEngine/src/softmax_int8.c"
 ../src/TinyEngine/src/softmax_int8.c: In function 'tinyengine_status softmax_int8(int8_t*, uint16_t, int32_t, int32_t, int32_t, int8_t*)':
 ../src/TinyEngine/src/softmax_int8.c:12:1: warning: no return statement in function returning non-void [-Wreturn-type]
  }
@@ -202,125 +86,39 @@ arm-none-eabi-g++ -Wall -O0 -g3 -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.s
 ' '
 'Building file: ../src/Source/depthwise_kernel3x3_stride1_pad1_padoffset0_inplace_CHW.c'
 'Invoking: ARM v7 g++ compiler'
-arm-none-eabi-g++ -Wall -O0 -g3 -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps\src" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps\src\Include" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps\src\TinyEngine\include" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps\src\TinyEngine\third_party\CMSIS_NN\Include" -c -fmessage-length=0 -MT"src/Source/depthwise_kernel3x3_stride1_pad1_padoffset0_inplace_CHW.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../project-emenist-on-ps_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/Source/depthwise_kernel3x3_stride1_pad1_padoffset0_inplace_CHW.d" -MT"src/Source/depthwise_kernel3x3_stride1_pad1_padoffset0_inplace_CHW.o" -o "src/Source/depthwise_kernel3x3_stride1_pad1_padoffset0_inplace_CHW.o" "../src/Source/depthwise_kernel3x3_stride1_pad1_padoffset0_inplace_CHW.c"
+arm-none-eabi-g++ -Wall -O0 -g3 -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src\Include" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src\TinyEngine\include" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src\TinyEngine\third_party\CMSIS_NN\Include" -c -fmessage-length=0 -MT"src/Source/depthwise_kernel3x3_stride1_pad1_padoffset0_inplace_CHW.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../project-emenist-on-ps_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/Source/depthwise_kernel3x3_stride1_pad1_padoffset0_inplace_CHW.d" -MT"src/Source/depthwise_kernel3x3_stride1_pad1_padoffset0_inplace_CHW.o" -o "src/Source/depthwise_kernel3x3_stride1_pad1_padoffset0_inplace_CHW.o" "../src/Source/depthwise_kernel3x3_stride1_pad1_padoffset0_inplace_CHW.c"
 'Finished building: ../src/Source/depthwise_kernel3x3_stride1_pad1_padoffset0_inplace_CHW.c'
 ' '
 'Building file: ../src/Source/depthwise_kernel3x3_stride2_pad0_padoffset1_inplace_CHW.c'
 'Invoking: ARM v7 g++ compiler'
-arm-none-eabi-g++ -Wall -O0 -g3 -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps\src" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps\src\Include" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps\src\TinyEngine\include" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps\src\TinyEngine\third_party\CMSIS_NN\Include" -c -fmessage-length=0 -MT"src/Source/depthwise_kernel3x3_stride2_pad0_padoffset1_inplace_CHW.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../project-emenist-on-ps_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/Source/depthwise_kernel3x3_stride2_pad0_padoffset1_inplace_CHW.d" -MT"src/Source/depthwise_kernel3x3_stride2_pad0_padoffset1_inplace_CHW.o" -o "src/Source/depthwise_kernel3x3_stride2_pad0_padoffset1_inplace_CHW.o" "../src/Source/depthwise_kernel3x3_stride2_pad0_padoffset1_inplace_CHW.c"
+arm-none-eabi-g++ -Wall -O0 -g3 -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src\Include" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src\TinyEngine\include" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src\TinyEngine\third_party\CMSIS_NN\Include" -c -fmessage-length=0 -MT"src/Source/depthwise_kernel3x3_stride2_pad0_padoffset1_inplace_CHW.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../project-emenist-on-ps_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/Source/depthwise_kernel3x3_stride2_pad0_padoffset1_inplace_CHW.d" -MT"src/Source/depthwise_kernel3x3_stride2_pad0_padoffset1_inplace_CHW.o" -o "src/Source/depthwise_kernel3x3_stride2_pad0_padoffset1_inplace_CHW.o" "../src/Source/depthwise_kernel3x3_stride2_pad0_padoffset1_inplace_CHW.c"
 'Finished building: ../src/Source/depthwise_kernel3x3_stride2_pad0_padoffset1_inplace_CHW.c'
 ' '
 'Building file: ../src/Source/genModel.c'
 'Invoking: ARM v7 g++ compiler'
-arm-none-eabi-g++ -Wall -O0 -g3 -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps\src" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps\src\Include" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps\src\TinyEngine\include" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps\src\TinyEngine\third_party\CMSIS_NN\Include" -c -fmessage-length=0 -MT"src/Source/genModel.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../project-emenist-on-ps_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/Source/genModel.d" -MT"src/Source/genModel.o" -o "src/Source/genModel.o" "../src/Source/genModel.c"
-../src/Source/genModel.c: In function 'void invoke_inf()':
-../src/Source/genModel.c:20:30: error: invalid conversion from 'signed char*' to 'const char*' [-fpermissive]
-     requantize_uint8_to_int8(&buffer0[0],784, 1073741824,1,127,-1,-128,127,&buffer0[784]);
-                              ^~~~~~~~~~~
-In file included from ../src/Source/genModel.c:3:0:
-C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps\src\TinyEngine\include/tinyengine_function.h:93:19: note:   initializing argument 1 of 'tinyengine_status requantize_uint8_to_int8(const char*, uint16_t, int32_t, int32_t, int32_t, int32_t, int32_t, int32_t, int8_t*)'
- tinyengine_status requantize_uint8_to_int8(
-                   ^~~~~~~~~~~~~~~~~~~~~~~~
-make: *** [src/Source/subdir.mk:26: src/Source/genModel.o] Error 1
-21:38:50 **** Auto Build of configuration Debug for project project-emenist-on-ps ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/Source/genModel.c'
-'Invoking: ARM v7 g++ compiler'
-arm-none-eabi-g++ -Wall -O0 -g3 -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps\src" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps\src\Include" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps\src\TinyEngine\include" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps\src\TinyEngine\third_party\CMSIS_NN\Include" -c -fmessage-length=0 -MT"src/Source/genModel.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../project-emenist-on-ps_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/Source/genModel.d" -MT"src/Source/genModel.o" -o "src/Source/genModel.o" "../src/Source/genModel.c"
+arm-none-eabi-g++ -Wall -O0 -g3 -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src\Include" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src\TinyEngine\include" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src\TinyEngine\third_party\CMSIS_NN\Include" -c -fmessage-length=0 -MT"src/Source/genModel.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../project-emenist-on-ps_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/Source/genModel.d" -MT"src/Source/genModel.o" -o "src/Source/genModel.o" "../src/Source/genModel.c"
 'Finished building: ../src/Source/genModel.c'
 ' '
-'Building target: project-emenist-on-ps.elf'
-'Invoking: ARM v7 g++ linker'
-arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../project-emenist-on-ps_bsp/ps7_cortexa9_0/lib -o "project-emenist-on-ps.elf"  ./src/TinyEngine/third_party/CMSIS_NN/Source/arm_softmax_s8.o  ./src/TinyEngine/src/convolve_1x1_s8.o ./src/TinyEngine/src/convolve_s8_kernel3_stride1_pad1.o ./src/TinyEngine/src/convolve_s8_kernel3_stride2_padoffset1_oddch.o ./src/TinyEngine/src/mat_mult_kernels.o ./src/TinyEngine/src/reduce.o ./src/TinyEngine/src/requantize.o ./src/TinyEngine/src/softmax_int8.o  ./src/Source/depthwise_kernel3x3_stride1_pad1_padoffset0_inplace_CHW.o ./src/Source/depthwise_kernel3x3_stride2_pad0_padoffset1_inplace_CHW.o ./src/Source/genModel.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
-../../project-emenist-on-ps_bsp/ps7_cortexa9_0/lib\libxil.a(xil-crt0.o): In function `_start':
-C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps_bsp\ps7_cortexa9_0\libsrc\standalone_v6_8\src/xil-crt0.S:138: undefined reference to `main'
-collect2.exe: error: ld returned 1 exit status
-make: *** [makefile:55: project-emenist-on-ps.elf] Error 1
-21:43:45 **** Auto Build of configuration Debug for project project-emenist-on-ps ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
 'Building file: ../src/main.c'
 'Invoking: ARM v7 g++ compiler'
-arm-none-eabi-g++ -Wall -O0 -g3 -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps\src" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps\src\Include" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps\src\TinyEngine\include" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps\src\TinyEngine\third_party\CMSIS_NN\Include" -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../project-emenist-on-ps_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+arm-none-eabi-g++ -Wall -O0 -g3 -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src\Include" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src\TinyEngine\include" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src\TinyEngine\third_party\CMSIS_NN\Include" -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../project-emenist-on-ps_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:14:0:
+C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src\Include/genModel.h:12:17: warning: 'sbuf' defined but not used [-Wunused-variable]
+ static int16_t *sbuf = (int16_t *)&buffer[9408];
+                 ^~~~
+C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps-fucked\src\Include/genModel.h:11:21: warning: 'buffer0' defined but not used [-Wunused-variable]
+ static signed char *buffer0 = &buffer[0];
+                     ^~~~~~~
 'Finished building: ../src/main.c'
 ' '
-'Building target: project-emenist-on-ps.elf'
+'Building target: project-emenist-on-ps-fucked.elf'
 'Invoking: ARM v7 g++ linker'
-arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../project-emenist-on-ps_bsp/ps7_cortexa9_0/lib -o "project-emenist-on-ps.elf"  ./src/TinyEngine/third_party/CMSIS_NN/Source/arm_softmax_s8.o  ./src/TinyEngine/src/convolve_1x1_s8.o ./src/TinyEngine/src/convolve_s8_kernel3_stride1_pad1.o ./src/TinyEngine/src/convolve_s8_kernel3_stride2_padoffset1_oddch.o ./src/TinyEngine/src/mat_mult_kernels.o ./src/TinyEngine/src/reduce.o ./src/TinyEngine/src/requantize.o ./src/TinyEngine/src/softmax_int8.o  ./src/Source/depthwise_kernel3x3_stride1_pad1_padoffset0_inplace_CHW.o ./src/Source/depthwise_kernel3x3_stride2_pad0_padoffset1_inplace_CHW.o ./src/Source/genModel.o  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
-../../project-emenist-on-ps_bsp/ps7_cortexa9_0/lib\libxil.a(xil-crt0.o): In function `_start':
-C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps_bsp\ps7_cortexa9_0\libsrc\standalone_v6_8\src/xil-crt0.S:138: undefined reference to `main'
-collect2.exe: error: ld returned 1 exit status
-make: *** [makefile:56: project-emenist-on-ps.elf] Error 1
-21:43:49 **** Auto Build of configuration Debug for project project-emenist-on-ps ****
-make pre-build main-build 
-a9-linaro-pre-build-step
+arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../project-emenist-on-ps_bsp/ps7_cortexa9_0/lib -o "project-emenist-on-ps-fucked.elf"  ./src/TinyEngine/third_party/CMSIS_NN/Source/arm_softmax_s8.o  ./src/TinyEngine/src/convolve_1x1_s8.o ./src/TinyEngine/src/convolve_s8_kernel3_stride1_pad1.o ./src/TinyEngine/src/convolve_s8_kernel3_stride2_padoffset1_oddch.o ./src/TinyEngine/src/mat_mult_kernels.o ./src/TinyEngine/src/reduce.o ./src/TinyEngine/src/requantize.o ./src/TinyEngine/src/softmax_int8.o  ./src/Source/depthwise_kernel3x3_stride1_pad1_padoffset0_inplace_CHW.o ./src/Source/depthwise_kernel3x3_stride2_pad0_padoffset1_inplace_CHW.o ./src/Source/genModel.o  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: project-emenist-on-ps-fucked.elf'
 ' '
-'Building file: ../src/main.c'
-'Invoking: ARM v7 g++ compiler'
-arm-none-eabi-g++ -Wall -O0 -g3 -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps\src" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps\src\Include" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps\src\TinyEngine\include" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps\src\TinyEngine\third_party\CMSIS_NN\Include" -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../project-emenist-on-ps_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-../src/main.c:11:10: fatal error: test_images/input_9.h: No such file or directory
- #include "test_images/input_9.h"
-          ^~~~~~~~~~~~~~~~~~~~~~~
-compilation terminated.
-make: *** [src/subdir.mk:23: src/main.o] Error 1
-21:44:06 **** Auto Build of configuration Debug for project project-emenist-on-ps ****
-make pre-build main-build 
-a9-linaro-pre-build-step
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size project-emenist-on-ps-fucked.elf  |tee "project-emenist-on-ps-fucked.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 141728	   2592	  43304	 187624	  2dce8	project-emenist-on-ps-fucked.elf
+'Finished building: project-emenist-on-ps-fucked.elf.size'
 ' '
-'Building file: ../src/main.c'
-'Invoking: ARM v7 g++ compiler'
-arm-none-eabi-g++ -Wall -O0 -g3 -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps\src" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps\src\Include" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps\src\TinyEngine\include" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps\src\TinyEngine\third_party\CMSIS_NN\Include" -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../project-emenist-on-ps_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-../src/main.c:11:10: fatal error: test_images/input_9.h: No such file or directory
- #include "test_images/input_9.h"
-          ^~~~~~~~~~~~~~~~~~~~~~~
-compilation terminated.
-make: *** [src/subdir.mk:23: src/main.o] Error 1
-21:44:16 **** Auto Build of configuration Debug for project project-emenist-on-ps ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.c'
-'Invoking: ARM v7 g++ compiler'
-arm-none-eabi-g++ -Wall -O0 -g3 -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps\src" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps\src\Include" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps\src\TinyEngine\include" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps\src\TinyEngine\third_party\CMSIS_NN\Include" -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../project-emenist-on-ps_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-../src/main.c: In function 'int main()':
-../src/main.c:45:19: error: 'input_data' was not declared in this scope
-     memcpy(input, input_data, INPUT_SIZE_BYTE);
-                   ^~~~~~~~~~
-../src/main.c:45:19: note: suggested alternative: 'input'
-     memcpy(input, input_data, INPUT_SIZE_BYTE);
-                   ^~~~~~~~~~
-                   input
-../src/main.c:70:49: error: 'label' was not declared in this scope
-     xil_printf("  Expected label: %d (%c)\r\n", label, get_label_char(label));
-                                                 ^~~~~
-../src/main.c:70:49: note: suggested alternative: 'labs'
-     xil_printf("  Expected label: %d (%c)\r\n", label, get_label_char(label));
-                                                 ^~~~~
-                                                 labs
-make: *** [src/subdir.mk:23: src/main.o] Error 1
-21:46:03 **** Auto Build of configuration Debug for project project-emenist-on-ps ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.c'
-'Invoking: ARM v7 g++ compiler'
-arm-none-eabi-g++ -Wall -O0 -g3 -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps\src" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps\src\Include" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps\src\TinyEngine\include" -I"C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps\src\TinyEngine\third_party\CMSIS_NN\Include" -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../project-emenist-on-ps_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-'Finished building: ../src/main.c'
-' '
-'Building target: project-emenist-on-ps.elf'
-'Invoking: ARM v7 g++ linker'
-arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../project-emenist-on-ps_bsp/ps7_cortexa9_0/lib -o "project-emenist-on-ps.elf"  ./src/TinyEngine/third_party/CMSIS_NN/Source/arm_softmax_s8.o  ./src/TinyEngine/src/convolve_1x1_s8.o ./src/TinyEngine/src/convolve_s8_kernel3_stride1_pad1.o ./src/TinyEngine/src/convolve_s8_kernel3_stride2_padoffset1_oddch.o ./src/TinyEngine/src/mat_mult_kernels.o ./src/TinyEngine/src/reduce.o ./src/TinyEngine/src/requantize.o ./src/TinyEngine/src/softmax_int8.o  ./src/Source/depthwise_kernel3x3_stride1_pad1_padoffset0_inplace_CHW.o ./src/Source/depthwise_kernel3x3_stride2_pad0_padoffset1_inplace_CHW.o ./src/Source/genModel.o  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
-./src/main.o: In function `getInput()':
-C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps\Debug/../src/Source/genModel.c:8: multiple definition of `getInput()'
-./src/Source/genModel.o:C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps\Debug/../src/Source/genModel.c:8: first defined here
-./src/main.o: In function `getOutput()':
-C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps\Debug/../src/Source/genModel.c:11: multiple definition of `getOutput()'
-./src/Source/genModel.o:C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps\Debug/../src/Source/genModel.c:11: first defined here
-./src/main.o: In function `invoke_inf()':
-C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps\Debug/../src/Source/genModel.c:15: multiple definition of `invoke_inf()'
-./src/Source/genModel.o:C:\Users\Samo\Desktop\tutorial-1\tutorial-1.sdk\project-emenist-on-ps\Debug/../src/Source/genModel.c:15: first defined here
-collect2.exe: error: ld returned 1 exit status
-make: *** [makefile:56: project-emenist-on-ps.elf] Error 1

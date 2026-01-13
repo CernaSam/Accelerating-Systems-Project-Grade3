@@ -1,4 +1,4 @@
-09:41:11 **** Build of configuration Debug for project tutorial-1_bsp_xgpiops_polled_example_2 ****
+22:51:57 **** Build of configuration Debug for project tutorial-1_bsp_xgpiops_polled_example_2 ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
@@ -19,5 +19,5 @@ arm-none-eabi-size tutorial-1_bsp_xgpiops_polled_example_2.elf  |tee "tutorial-1
 'Finished building: tutorial-1_bsp_xgpiops_polled_example_2.elf.size'
 ' '
 
-09:41:12 Build Finished (took 1s.507ms)
+22:51:58 Build Finished (took 1s.142ms)
 

@@ -1,0 +1,35 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date         : Wed Jan 14 01:18:46 2026
+| Host         : deazon running 64-bit Ubuntu 24.04.1 LTS
+| Command      : report_drc -file final_project_grade_3_wrapper_drc_opted.rpt -pb final_project_grade_3_wrapper_drc_opted.pb -rpx final_project_grade_3_wrapper_drc_opted.rpx
+| Design       : final_project_grade_3_wrapper
+| Device       : xc7z007sclg225-1
+| Speed File   : -1
+| Design State : Fully Placed
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 0
++------+----------+-------------+------------+
+| Rule | Severity | Description | Violations |
++------+----------+-------------+------------+
++------+----------+-------------+------------+
+
+2. REPORT DETAILS
+-----------------
+

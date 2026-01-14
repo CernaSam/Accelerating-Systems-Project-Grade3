@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="Auto Detect" key="final_project_grade_3_wrapper_hw_platform_0-device"/>
+	<item value="final_project_grade_3_wrapper.bit" key="final_project_grade_3_wrapper_hw_platform_0-bitFile"/>
+	<item value="final_project_grade_3_wrapper_hw_platform_0" key="programfpga.hwplatform"/>
+	<item value="Local" key="final_project_grade_3_wrapper_hw_platform_0-target"/>
+	<item value="false" key="final_project_grade_3_wrapper_hw_platform_0-partial_bit"/>
+	<item value="" key="final_project_grade_3_wrapper_hw_platform_0-bmmFile"/>
+</section>

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# 
+# Start of session at: Wed Jan 14 01:46:03 2026
+# Process ID: 304311
+# Current directory: /home/deazon/final_project/final_project.sdk/webtalk
+# Command line: wbtcv -mode batch -source sdk_webtalk.tcl
+# Log file: /home/deazon/final_project/final_project.sdk/webtalk/webtalk.log
+# Journal file: /home/deazon/final_project/final_project.sdk/webtalk/webtalk.jou
+#-----------------------------------------------------------
+source sdk_webtalk.tcl

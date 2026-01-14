@@ -1,7 +1,5 @@
 # Execution Without Acceleration Summary
 
-## Implementation Results
-
 ### System Configuration
 - **Processing**: 666 MHz (PS only, PL unused)
 - **Model**: st_mnist_v1_28_tfs_int8 (INT8 quantized CNN)

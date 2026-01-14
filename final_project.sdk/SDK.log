@@ -2166,3 +2166,212 @@ con
 ----------------End of Script----------------
 
 04:30:23 INFO  : Launch script is exported to file '/home/deazon/final_project/final_project.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/nn_inference_grade3_debug.tcl'
+04:36:18 INFO  : Disconnected from the channel tcfchan#22.
+04:41:31 INFO  : Launching XSCT server: xsct -n -interactive /home/deazon/final_project/final_project.sdk/temp_xsdb_launch_script.tcl
+04:41:33 INFO  : XSCT server has started successfully.
+04:41:35 INFO  : Successfully done setting XSCT server connection channel  
+04:41:35 INFO  : Successfully done setting SDK workspace  
+04:41:36 INFO  : Registering command handlers for SDK TCF services
+04:41:37 INFO  : Processing command line option -hwspec /home/deazon/final_project/final_project.sdk/final_project_grade_3_wrapper.hdf.
+04:41:37 INFO  : Checking for hwspec changes in the project final_project_grade_3_wrapper_hw_platform_0.
+04:41:37 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1768362042000,  Project:1768350087000
+04:41:37 INFO  : The hardware specification for project 'final_project_grade_3_wrapper_hw_platform_0' is different from /home/deazon/final_project/final_project.sdk/final_project_grade_3_wrapper.hdf.
+04:41:37 INFO  : Copied contents of /home/deazon/final_project/final_project.sdk/final_project_grade_3_wrapper.hdf into /final_project_grade_3_wrapper_hw_platform_0/system.hdf.
+04:41:39 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+04:41:40 INFO  : 
+04:41:41 INFO  : Updating hardware inferred compiler options for nn_inference_grade3.
+04:41:41 INFO  : Clearing existing target manager status.
+04:41:41 INFO  : Closing and re-opening the MSS file of ther project nn_inference_grade3_bsp
+04:41:41 INFO  : Closing and re-opening the MSS file of ther project nn_inference_grade3_bsp
+04:41:42 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+04:41:42 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+04:42:48 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+04:42:48 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+04:42:50 INFO  : FPGA configured successfully with bitstream "/home/deazon/final_project/final_project.sdk/final_project_grade_3_wrapper_hw_platform_0/final_project_grade_3_wrapper.bit"
+04:43:12 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+04:43:12 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+04:43:12 INFO  : 'jtag frequency' command is executed.
+04:43:12 INFO  : Sourcing of '/home/deazon/final_project/final_project.sdk/final_project_grade_3_wrapper_hw_platform_0/ps7_init.tcl' is done.
+04:43:12 INFO  : Context for 'APU' is selected.
+04:43:12 INFO  : System reset is completed.
+04:43:15 INFO  : 'after 3000' command is executed.
+04:43:15 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+04:43:16 INFO  : FPGA configured successfully with bitstream "/home/deazon/final_project/final_project.sdk/final_project_grade_3_wrapper_hw_platform_0/final_project_grade_3_wrapper.bit"
+04:43:16 INFO  : Context for 'APU' is selected.
+04:43:16 INFO  : Hardware design information is loaded from '/home/deazon/final_project/final_project.sdk/final_project_grade_3_wrapper_hw_platform_0/system.hdf'.
+04:43:16 INFO  : 'configparams force-mem-access 1' command is executed.
+04:43:16 INFO  : Context for 'APU' is selected.
+04:43:16 INFO  : 'ps7_init' command is executed.
+04:43:16 INFO  : 'ps7_post_config' command is executed.
+04:43:16 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+04:43:17 INFO  : The application '/home/deazon/final_project/final_project.sdk/nn_inference_grade3/Debug/nn_inference_grade3.elf' is downloaded to processor 'ps7_cortexa9_0'.
+04:43:17 INFO  : 'configparams force-mem-access 0' command is executed.
+04:43:17 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/deazon/final_project/final_project.sdk/final_project_grade_3_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file /home/deazon/final_project/final_project.sdk/final_project_grade_3_wrapper_hw_platform_0/final_project_grade_3_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+loadhw -hw /home/deazon/final_project/final_project.sdk/final_project_grade_3_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+dow /home/deazon/final_project/final_project.sdk/nn_inference_grade3/Debug/nn_inference_grade3.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+04:43:17 INFO  : Memory regions updated for context APU
+04:43:17 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+04:43:17 INFO  : 'con' command is executed.
+04:43:17 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+con
+----------------End of Script----------------
+
+04:43:17 INFO  : Launch script is exported to file '/home/deazon/final_project/final_project.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/nn_inference_grade3_debug.tcl'
+04:45:30 INFO  : Disconnected from the channel tcfchan#1.
+04:45:31 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+04:45:31 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+04:45:31 INFO  : 'jtag frequency' command is executed.
+04:45:31 INFO  : Sourcing of '/home/deazon/final_project/final_project.sdk/final_project_grade_3_wrapper_hw_platform_0/ps7_init.tcl' is done.
+04:45:31 INFO  : Context for 'APU' is selected.
+04:45:31 INFO  : System reset is completed.
+04:45:34 INFO  : 'after 3000' command is executed.
+04:45:34 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+04:45:35 INFO  : FPGA configured successfully with bitstream "/home/deazon/final_project/final_project.sdk/final_project_grade_3_wrapper_hw_platform_0/final_project_grade_3_wrapper.bit"
+04:45:35 INFO  : Context for 'APU' is selected.
+04:45:36 INFO  : Hardware design information is loaded from '/home/deazon/final_project/final_project.sdk/final_project_grade_3_wrapper_hw_platform_0/system.hdf'.
+04:45:36 INFO  : 'configparams force-mem-access 1' command is executed.
+04:45:36 INFO  : Context for 'APU' is selected.
+04:45:36 INFO  : 'ps7_init' command is executed.
+04:45:36 INFO  : 'ps7_post_config' command is executed.
+04:45:36 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+04:45:37 INFO  : The application '/home/deazon/final_project/final_project.sdk/nn_inference_grade3/Debug/nn_inference_grade3.elf' is downloaded to processor 'ps7_cortexa9_0'.
+04:45:37 INFO  : 'configparams force-mem-access 0' command is executed.
+04:45:37 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/deazon/final_project/final_project.sdk/final_project_grade_3_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file /home/deazon/final_project/final_project.sdk/final_project_grade_3_wrapper_hw_platform_0/final_project_grade_3_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+loadhw -hw /home/deazon/final_project/final_project.sdk/final_project_grade_3_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+dow /home/deazon/final_project/final_project.sdk/nn_inference_grade3/Debug/nn_inference_grade3.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+04:45:37 INFO  : Memory regions updated for context APU
+04:45:37 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+04:45:37 INFO  : 'con' command is executed.
+04:45:37 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+con
+----------------End of Script----------------
+
+04:45:37 INFO  : Launch script is exported to file '/home/deazon/final_project/final_project.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/nn_inference_grade3_debug.tcl'
+04:48:49 INFO  : Disconnected from the channel tcfchan#2.
+04:48:50 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+04:48:51 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+04:48:51 INFO  : 'jtag frequency' command is executed.
+04:48:51 INFO  : Sourcing of '/home/deazon/final_project/final_project.sdk/final_project_grade_3_wrapper_hw_platform_0/ps7_init.tcl' is done.
+04:48:51 INFO  : Context for 'APU' is selected.
+04:48:51 INFO  : System reset is completed.
+04:48:54 INFO  : 'after 3000' command is executed.
+04:48:54 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+04:48:55 INFO  : FPGA configured successfully with bitstream "/home/deazon/final_project/final_project.sdk/final_project_grade_3_wrapper_hw_platform_0/final_project_grade_3_wrapper.bit"
+04:48:55 INFO  : Context for 'APU' is selected.
+04:48:55 INFO  : Hardware design information is loaded from '/home/deazon/final_project/final_project.sdk/final_project_grade_3_wrapper_hw_platform_0/system.hdf'.
+04:48:55 INFO  : 'configparams force-mem-access 1' command is executed.
+04:48:55 INFO  : Context for 'APU' is selected.
+04:48:55 INFO  : 'ps7_init' command is executed.
+04:48:55 INFO  : 'ps7_post_config' command is executed.
+04:48:55 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+04:48:55 INFO  : The application '/home/deazon/final_project/final_project.sdk/nn_inference_grade3/Debug/nn_inference_grade3.elf' is downloaded to processor 'ps7_cortexa9_0'.
+04:48:55 INFO  : 'configparams force-mem-access 0' command is executed.
+04:48:55 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/deazon/final_project/final_project.sdk/final_project_grade_3_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file /home/deazon/final_project/final_project.sdk/final_project_grade_3_wrapper_hw_platform_0/final_project_grade_3_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+loadhw -hw /home/deazon/final_project/final_project.sdk/final_project_grade_3_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+dow /home/deazon/final_project/final_project.sdk/nn_inference_grade3/Debug/nn_inference_grade3.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+04:48:55 INFO  : Memory regions updated for context APU
+04:48:55 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+04:48:55 INFO  : 'con' command is executed.
+04:48:55 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+con
+----------------End of Script----------------
+
+04:48:55 INFO  : Launch script is exported to file '/home/deazon/final_project/final_project.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/nn_inference_grade3_debug.tcl'
+04:52:12 INFO  : Disconnected from the channel tcfchan#3.
+04:52:13 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+04:52:13 INFO  : Jtag cable 'Avnet MiniZed V1 1234-oj1A' is selected.
+04:52:13 INFO  : 'jtag frequency' command is executed.
+04:52:13 INFO  : Sourcing of '/home/deazon/final_project/final_project.sdk/final_project_grade_3_wrapper_hw_platform_0/ps7_init.tcl' is done.
+04:52:13 INFO  : Context for 'APU' is selected.
+04:52:13 INFO  : System reset is completed.
+04:52:16 INFO  : 'after 3000' command is executed.
+04:52:16 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1' command is executed.
+04:52:17 INFO  : FPGA configured successfully with bitstream "/home/deazon/final_project/final_project.sdk/final_project_grade_3_wrapper_hw_platform_0/final_project_grade_3_wrapper.bit"
+04:52:17 INFO  : Context for 'APU' is selected.
+04:52:17 INFO  : Hardware design information is loaded from '/home/deazon/final_project/final_project.sdk/final_project_grade_3_wrapper_hw_platform_0/system.hdf'.
+04:52:17 INFO  : 'configparams force-mem-access 1' command is executed.
+04:52:17 INFO  : Context for 'APU' is selected.
+04:52:17 INFO  : 'ps7_init' command is executed.
+04:52:17 INFO  : 'ps7_post_config' command is executed.
+04:52:17 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+04:52:18 INFO  : The application '/home/deazon/final_project/final_project.sdk/nn_inference_grade3/Debug/nn_inference_grade3.elf' is downloaded to processor 'ps7_cortexa9_0'.
+04:52:18 INFO  : 'configparams force-mem-access 0' command is executed.
+04:52:18 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/deazon/final_project/final_project.sdk/final_project_grade_3_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A" && level==0} -index 1
+fpga -file /home/deazon/final_project/final_project.sdk/final_project_grade_3_wrapper_hw_platform_0/final_project_grade_3_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+loadhw -hw /home/deazon/final_project/final_project.sdk/final_project_grade_3_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+dow /home/deazon/final_project/final_project.sdk/nn_inference_grade3/Debug/nn_inference_grade3.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+04:52:18 INFO  : Memory regions updated for context APU
+04:52:18 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+04:52:18 INFO  : 'con' command is executed.
+04:52:18 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Avnet MiniZed V1 1234-oj1A"} -index 0
+con
+----------------End of Script----------------
+
+04:52:18 INFO  : Launch script is exported to file '/home/deazon/final_project/final_project.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/nn_inference_grade3_debug.tcl'

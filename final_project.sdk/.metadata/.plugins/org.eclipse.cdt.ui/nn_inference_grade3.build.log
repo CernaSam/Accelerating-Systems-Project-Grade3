@@ -1,8 +1,8 @@
-04:30:15 **** Incremental Build of configuration Debug for project nn_inference_grade3 ****
+04:52:11 **** Incremental Build of configuration Debug for project nn_inference_grade3 ****
 make pre-build main-build 
 a9-linaro-pre-build-step
  
 make: Nothing to be done for 'main-build'.
 
-04:30:15 Build Finished (took 164ms)
+04:52:11 Build Finished (took 266ms)
 

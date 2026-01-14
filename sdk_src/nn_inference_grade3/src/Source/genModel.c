@@ -1,6 +1,6 @@
 /* Automatically generated source file - Modified for Grade 3 with timing */
 #include <float.h>
-#include "xtime_l.h"
+#include "xil_io.h"
 #include "xil_printf.h"
 #include <tinyengine_function.h>
 
@@ -8,20 +8,32 @@
 #include "genInclude.h"
 
 // Timing globals
-XTime layer_times[9];
+volatile u64 layer_times[9] = {0};  // Volatile to prevent optimization
 
 // Zynq PS global timer runs at CPU_freq/2 = 333.333 MHz
-// COUNTS_PER_SECOND from xtime_l.h is sometimes wrong in BSP
-// so we define it correctly here
 #define TIMER_FREQ_HZ 333333333ULL  // 333.333 MHz
 
-static inline u64 ticks_to_us(XTime ticks) {
+// Global Timer registers (physical addresses)
+#define GLOBAL_TMR_BASEADDR 0xF8F00200U
+#define GTIMER_COUNTER_LOWER_OFFSET 0x00U
+#define GTIMER_COUNTER_UPPER_OFFSET 0x04U
+
+// Read 64-bit global timer directly
+static inline u64 read_global_timer() {
+    u32 low, high1, high2;
+    // Read high, low, high again to handle wraparound
+    do {
+        high1 = Xil_In32(GLOBAL_TMR_BASEADDR + GTIMER_COUNTER_UPPER_OFFSET);
+        low = Xil_In32(GLOBAL_TMR_BASEADDR + GTIMER_COUNTER_LOWER_OFFSET);
+        high2 = Xil_In32(GLOBAL_TMR_BASEADDR + GTIMER_COUNTER_UPPER_OFFSET);
+    } while (high1 != high2);
+    
+    return ((u64)high1 << 32) | (u64)low;
+}
+
+static inline u64 ticks_to_us(u64 ticks) {
     // Convert ticks to microseconds
-    // us = (ticks * 1000000) / TIMER_FREQ_HZ
-    // Use 64-bit math to avoid overflow
-    u64 ticks_64 = (u64)ticks;
-    u64 us = (ticks_64 * 1000000ULL) / TIMER_FREQ_HZ;
-    return us;
+    return (ticks * 1000000ULL) / TIMER_FREQ_HZ;
 }
 
 signed char* getInput() {
@@ -33,37 +45,33 @@ signed char* getOutput() {
 }
 
 void invoke_inf(){
-    XTime start_time, end_time;
+    u64 start_time, end_time;
     
     /* layer 0:QUANTIZE */
 #ifdef PRINT_LAYER
     xil_printf("=== OP 0, QUANTIZE ===\r\n");
 #endif
-    XTime_GetTime(&start_time);
+    start_time = read_global_timer();
     requantize_uint8_to_int8(&buffer0[0],784, 1073741824,1,127,-1,-128,127,&buffer0[784]);
-    XTime_GetTime(&end_time);
+    end_time = read_global_timer();
     layer_times[0] = end_time - start_time;
-    xil_printf("DEBUG L0: start=%llu, end=%llu, diff=%llu\r\n", 
-               (u64)start_time, (u64)end_time, (u64)layer_times[0]);
     
     /* layer 1:CONV_2D */
 #ifdef PRINT_LAYER
     xil_printf("=== OP 1, CONV_2D ===\r\n");
 #endif
-    XTime_GetTime(&start_time);
+    start_time = read_global_timer();
     convolve_s8_kernel3_stride2_padoffset1_oddch(&buffer0[784],28,28,1,(const q7_t*) weight0,bias0,shift0,multiplier0,-128,1,-128,127,&buffer0[6272],14,14,16,sbuf,-1);
-    XTime_GetTime(&end_time);
+    end_time = read_global_timer();
     layer_times[1] = end_time - start_time;
-    xil_printf("DEBUG L1: start=%llu, end=%llu, diff=%llu\r\n", 
-               (u64)start_time, (u64)end_time, (u64)layer_times[1]);
     
     /* layer 2:DEPTHWISE_CONV_2D */
 #ifdef PRINT_LAYER
     xil_printf("=== OP 2, DEPTHWISE_CONV_2D ===\r\n");
 #endif
-    XTime_GetTime(&start_time);
+    start_time = read_global_timer();
     depthwise_kernel3x3_stride1_pad1_padoffset0_inplace_CHW(&buffer0[6272],14,14,16,(const q7_t*) CHWweight1,offsetBias1,offsetRBias1,shift1,multiplier1,-128,128,-128,127,&buffer0[6272],14,14,16,sbuf,-128);
-    XTime_GetTime(&end_time);
+    end_time = read_global_timer();
     layer_times[2] = end_time - start_time;
     
     /* layer 3:CONV_2D */
@@ -73,9 +81,7 @@ void invoke_inf(){
     XTime_GetTime(&start_time);
     convolve_s8_kernel3_stride1_pad1(&buffer0[6272],14,14,16,(const q7_t*) weight2,bias2,shift2,multiplier2,-128,128,-128,127,&buffer0[0],14,14,32,sbuf,-128);
     XTime_GetTime(&end_time);
-    layer_times[3] = end_time - start_time;
-    xil_printf("DEBUG L3: start=%llu, end=%llu, diff=%llu\r\n", 
-               (u64)start_time, (u64)end_time, (u64)layer_times[3]);
+    layer_times[3] = (start_time >= end_time) ? (start_time - end_time) : ((0xFFFFFFFFFFFFFFFFULL - end_time) + start_time + 1);
     
     /* layer 4:DEPTHWISE_CONV_2D */
 #ifdef PRINT_LAYER
@@ -84,7 +90,7 @@ void invoke_inf(){
     XTime_GetTime(&start_time);
     depthwise_kernel3x3_stride2_pad0_padoffset1_inplace_CHW(&buffer0[0],14,14,32,(const q7_t*) CHWweight3,offsetBias3,offsetRBias3,shift3,multiplier3,-128,128,-128,127,&buffer0[0],7,7,32,sbuf,-128);
     XTime_GetTime(&end_time);
-    layer_times[4] = end_time - start_time;
+    layer_times[4] = (start_time >= end_time) ? (start_time - end_time) : ((0xFFFFFFFFFFFFFFFFULL - end_time) + start_time + 1);
     
     /* layer 5:CONV_2D */
 #ifdef PRINT_LAYER
@@ -93,7 +99,7 @@ void invoke_inf(){
     XTime_GetTime(&start_time);
     convolve_1x1_s8(&buffer0[0],7,7,32,(const q7_t*) weight4,bias4,shift4,multiplier4,-128,128,-128,127,&buffer0[1568],7,7,64,sbuf);
     XTime_GetTime(&end_time);
-    layer_times[5] = end_time - start_time;
+    layer_times[5] = (start_time >= end_time) ? (start_time - end_time) : ((0xFFFFFFFFFFFFFFFFULL - end_time) + start_time + 1);
     
     /* layer 6:REDUCE */
 #ifdef PRINT_LAYER
@@ -102,7 +108,7 @@ void invoke_inf(){
     XTime_GetTime(&start_time);
     reduce_mean_axis_1_2_int8(&buffer0[1568],7,7,64, 1131728282,-1,-128, -128, -128,127, &buffer0[0]);
     XTime_GetTime(&end_time);
-    layer_times[6] = end_time - start_time;
+    layer_times[6] = (start_time >= end_time) ? (start_time - end_time) : ((0xFFFFFFFFFFFFFFFFULL - end_time) + start_time + 1);
     
     /* layer 7:CONV_2D */
 #ifdef PRINT_LAYER
@@ -111,7 +117,7 @@ void invoke_inf(){
     XTime_GetTime(&start_time);
     convolve_1x1_s8(&buffer0[0],1,1,64,(const q7_t*) weight5,bias5,shift5,multiplier5,100,128,-128,127,&buffer0[64],1,1,36,sbuf);
     XTime_GetTime(&end_time);
-    layer_times[7] = end_time - start_time;
+    layer_times[7] = (start_time >= end_time) ? (start_time - end_time) : ((0xFFFFFFFFFFFFFFFFULL - end_time) + start_time + 1);
     
     /* layer 8:SOFTMAX */
 #ifdef PRINT_LAYER
@@ -120,7 +126,7 @@ void invoke_inf(){
     XTime_GetTime(&start_time);
     softmax_int8(&buffer0[64],36, 1398313856,26,-31, &buffer0[0]);
     XTime_GetTime(&end_time);
-    layer_times[8] = end_time - start_time;
+    layer_times[8] = (start_time >= end_time) ? (start_time - end_time) : ((0xFFFFFFFFFFFFFFFFULL - end_time) + start_time + 1);
 }
 
 void print_timing_results() {

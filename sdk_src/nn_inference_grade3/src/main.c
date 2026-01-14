@@ -110,7 +110,14 @@ int main(void)
     
     XTime_GetTime(&test_end);
     xil_printf("Timer end value: %llu\r\n", (u64)test_end);
-    xil_printf("Difference (ticks): %llu\r\n", (u64)(test_end - test_start));
+    // Timer counts DOWN, so we need start - end (handling wraparound)
+    XTime test_diff;
+    if (test_start >= test_end) {
+        test_diff = test_start - test_end;
+    } else {
+        test_diff = (0xFFFFFFFFFFFFFFFFULL - test_end) + test_start + 1;
+    }
+    xil_printf("Difference (ticks): %llu\r\n", (u64)test_diff);
     xil_printf("COUNTS_PER_SECOND = %llu\r\n", (u64)COUNTS_PER_SECOND);
     
     if (test_end == test_start) {
@@ -171,7 +178,12 @@ int main(void)
         XTime_GetTime(&start_total);
         invoke_inf();
         XTime_GetTime(&end_total);
-        run_times[run] = end_total - start_total;
+        // Timer counts DOWN - handle correctly
+        if (start_total >= end_total) {
+            run_times[run] = start_total - end_total;
+        } else {
+            run_times[run] = (0xFFFFFFFFFFFFFFFFULL - end_total) + start_total + 1;
+        }
         
         // Find predicted class
         signed char max_val = -128;
